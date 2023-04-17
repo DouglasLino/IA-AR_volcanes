@@ -89,7 +89,7 @@ class ObjectDetectorHelper(
                 MODEL_EFFICIENTDETV1 -> "efficientdet-lite1.tflite"
                 MODEL_EFFICIENTDETV2 -> "efficientdet-lite2.tflite"
                 MODEL_VOLCANIZALCO -> "volcan-izalco_object.tflite"
-                else -> "mobilenetv1.tflite"
+                else -> "volcan-izalco_object.tflite"
             }
 
         try {
@@ -99,7 +99,7 @@ class ObjectDetectorHelper(
             objectDetectorListener?.onError(
                 "Object detector failed to initialize. See error logs for details"
             )
-            Log.e("Test", "TFLite failed to load model with error: " + e.message)
+            Log.e("Test", "DOCB failed to load model with error: " + e.message)
         }
     }
 
@@ -146,10 +146,10 @@ class ObjectDetectorHelper(
         const val DELEGATE_CPU = 0
         const val DELEGATE_GPU = 1
         const val DELEGATE_NNAPI = 2
-        const val MODEL_MOBILENETV1 = 0
+        const val MODEL_VOLCANIZALCO = 0
         const val MODEL_EFFICIENTDETV0 = 1
         const val MODEL_EFFICIENTDETV1 = 2
         const val MODEL_EFFICIENTDETV2 = 3
-        const val MODEL_VOLCANIZALCO = 4
+        const val MODEL_MOBILENETV1 = 4
     }
 }
