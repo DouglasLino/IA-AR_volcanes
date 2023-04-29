@@ -1,18 +1,18 @@
-/*
- * Copyright 2022 The TensorFlow Authors. All Rights Reserved.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *             http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+///*
+// * Copyright 2022 The TensorFlow Authors. All Rights Reserved.
+// *
+// * Licensed under the Apache License, Version 2.0 (the "License");
+// * you may not use this file except in compliance with the License.
+// * You may obtain a copy of the License at
+// *
+// *             http://www.apache.org/licenses/LICENSE-2.0
+// *
+// * Unless required by applicable law or agreed to in writing, software
+// * distributed under the License is distributed on an "AS IS" BASIS,
+// * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// * See the License for the specific language governing permissions and
+// * limitations under the License.
+// */
 package org.tensorflow.lite.examples.objectdetection.fragments
 
 import android.annotation.SuppressLint
@@ -109,10 +109,10 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
         }
 
         // Attach listeners to UI control widgets
-        initBottomSheetControls()
+        //initBottomSheetControls()
     }
 
-    private fun initBottomSheetControls() {
+    /*private fun initBottomSheetControls() {
         // When clicked, lower detection score threshold floor
         fragmentCameraBinding.bottomSheetLayout.thresholdMinus.setOnClickListener {
             if (objectDetectorHelper.threshold >= 0.1) {
@@ -172,7 +172,7 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
                 }
 
                 override fun onNothingSelected(p0: AdapterView<*>?) {
-                    /* no op */
+                    *//* no op *//*
                 }
             }
 
@@ -186,13 +186,13 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
                 }
 
                 override fun onNothingSelected(p0: AdapterView<*>?) {
-                    /* no op */
+                    *//* no op *//*
                 }
             }
     }
-
+*/
     // Update the values displayed in the bottom sheet. Reset detector.
-    private fun updateControlsUi() {
+    /*private fun updateControlsUi() {
         fragmentCameraBinding.bottomSheetLayout.maxResultsValue.text =
             objectDetectorHelper.maxResults.toString()
         fragmentCameraBinding.bottomSheetLayout.thresholdValue.text =
@@ -204,7 +204,7 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
         // delegate needs to be initialized on the thread using it when applicable
         objectDetectorHelper.clearObjectDetector()
         fragmentCameraBinding.overlay.clear()
-    }
+    }*/
 
     // Initialize CameraX, and prepare to bind the camera use cases
     private fun setUpCamera() {
@@ -303,8 +303,8 @@ class CameraFragment : Fragment(), ObjectDetectorHelper.DetectorListener {
       imageWidth: Int
     ) {
         activity?.runOnUiThread {
-            fragmentCameraBinding.bottomSheetLayout.inferenceTimeVal.text =
-                            String.format("%d ms", inferenceTime)
+            /*fragmentCameraBinding.bottomSheetLayout.inferenceTimeVal.text =
+                            String.format("%d ms", inferenceTime)*/
 
             // Pass necessary information to OverlayView for drawing on the canvas
             fragmentCameraBinding.overlay.setResults(
